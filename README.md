@@ -25,3 +25,6 @@ NOTE: If you get a ZMQ broker error, just re-run both the publisher and subscrib
 
 - HELICS C++98 API documentation: https://docs.helics.org/en/latest/doxygen/helicsCore_8h.html#a09ce7e2dda0bdee3fb77602c1f451554
 - Sabina's VIP Notebook for Troublehshooting Documention: https://github.com/cps-vip/cps-cosimulation-env/wiki/Sabina-Sokol's-Notebook
+- ROS2 Humble Tutorial on Colcon: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html
+- ROS2 Humble Tutorial on Creating Packages: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html
+- ROS2 Humble Tutorial on Creating Publishers/Subscribes: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
