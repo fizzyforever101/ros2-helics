@@ -3,7 +3,7 @@ Files Required to Link HELICS and ROS2 + Instructions to Run Sample
 
 ## Installation
 
-1. Install the pre-compiled HELICS libraries from https://github.com/GMLC-TDC/HELICS/releases somewhere in your ROS2 Ubuntu container and export the install path. Be sure to source your bash profile (source ~/.bashrc).
+1. Install the pre-compiled HELICS libraries from https://github.com/GMLC-TDC/HELICS/releases somewhere in your ROS2 Ubuntu container and export the install path. Be sure to source your shell configuration file (source ~/.bashrc).
 
 2. If you followed the ROS2 humble tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) and built all of the examples, you can navigate to ~/ros2_ws/src/examples/rclcpp/topics/ in your terminal to find the minimal_subscriber and minimal_publisher folders. If not, you can follow the steps in the package creation tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) to build your own package.
 
