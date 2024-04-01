@@ -7,7 +7,8 @@ Files Required to Link HELICS and ROS2 + Instructions to Run Sample
 
 2. Assuming you followed the ROS2 humble tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) and built all of the examples, you can navigate to ~/ros2_ws/src/examples/rclcpp/topics/ in your terminal to find the minimal_subscriber and minimal_publisher directories.
 
-3. Replace the `member_function.cpp` file in the "minimal_publisher" directories with the one included in this repository and update the `CMakeLists.txt file` there with `include(~/path/to/HELICSConfig.cmake)`, `target_link_libraries(publisher_member_function HELICS::helics)`, and `target_include_directories(publisher_member_function PRIVATE ~/path/to/HELICS/build/lib)`. These additions are required to link the header-only HELICS C++ library with ROS2.
+3. Replace the `member_function.cpp` and `package.xml` files in the "minimal_publisher" directory with the ones included in this repository and update the `CMakeLists.txt file` there with `include(~/path/to/HELICSConfig.cmake)`, `target_link_libraries(publisher_member_function HELICS::helics)`, and `target_include_directories(publisher_member_function PRIVATE ~/path/to/HELICS/build/lib)`. These additions are required to link the header-only HELICS C++ library with ROS2.
+![image](https://github.com/fizzyforever101/ros2-helics/assets/67799193/72566a29-62db-482b-9315-df787adc5f92)
 
 ## Running Example
 
@@ -17,8 +18,6 @@ Files Required to Link HELICS and ROS2 + Instructions to Run Sample
 
 Example Expected Output:
 ![image](https://github.com/fizzyforever101/ros2-helics/assets/67799193/83eb99a9-4a9e-43b8-952e-4b9b03c707f4)
-
-NOTE: If you get a ZMQ broker error, just re-run both the publisher and subscriber. It is unclear why this is an issue and is currently being investigated by the HELICS development team.
 
 ## Resources
 
