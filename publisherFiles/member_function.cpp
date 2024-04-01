@@ -19,6 +19,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "helics/cpp98/helics.hpp"
 
 using namespace std::chrono_literals;
 
@@ -40,8 +41,9 @@ private:
   void timer_callback()
   {
     auto message = std_msgs::msg::String();
+    std::string helicsversion = helicsGetVersion();
     message.data = "Hello, Sabina! " + std::to_string(count_++);
-    RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
+    RCLCPP_INFO(this->get_logger(), "Publishing: '%s' and the HELICS version is %s", message.data.c_str(), helicsversion.c_str());
     publisher_->publish(message);
   }
   rclcpp::TimerBase::SharedPtr timer_;
