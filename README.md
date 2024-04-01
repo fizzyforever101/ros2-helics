@@ -3,11 +3,11 @@ Files Required to Link HELICS and ROS2 + Instructions to Run Sample
 
 ## Installation
 
-1. Install the pre-compiled HELICS libraries from https://github.com/GMLC-TDC/HELICS/releases somewhere in your ROS2 Ubuntu container and export the install path. Be sure to source your shell configuration file (source ~/.bashrc).
+1. Follow the tutorial [here](https://docs.helics.org/en/latest/user-guide/installation/linux.html) to build HELICS from source. Be sure to export your installation path to your .bashrc file.
 
-2. If you followed the ROS2 humble tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) and built all of the examples, you can navigate to ~/ros2_ws/src/examples/rclcpp/topics/ in your terminal to find the minimal_subscriber and minimal_publisher folders. If not, you can follow the steps in the package creation tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) to build your own package.
+2. Assuming you followed the ROS2 humble tutorial (https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html) and built all of the examples, you can navigate to ~/ros2_ws/src/examples/rclcpp/topics/ in your terminal to find the minimal_subscriber and minimal_publisher directories.
 
-3. Add/replace the 4 files within the minimal_subscriber folder on the VM with the ones in the subscriberFiles folder provided here. Do the same with the publisher files.
+3. Replace the `member_function.cpp` file in the "minimal_publisher" directories with the one included in this repository and update the `CMakeLists.txt file` there with `include(~/path/to/HELICSConfig.cmake)`, `target_link_libraries(publisher_member_function HELICS::helics)`, and `target_include_directories(publisher_member_function PRIVATE ~/path/to/HELICS/build/lib)`. These additions are required to link the header-only HELICS C++ library with ROS2.
 
 ## Running Example
 
@@ -26,4 +26,4 @@ NOTE: If you get a ZMQ broker error, just re-run both the publisher and subscrib
 - Sabina's VIP Notebook for Troublehshooting Documention: https://github.com/cps-vip/cps-cosimulation-env/wiki/Sabina-Sokol's-Notebook
 - ROS2 Humble Tutorial on Colcon: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html
 - ROS2 Humble Tutorial on Creating Packages: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html
-- ROS2 Humble Tutorial on Creating Publishers/Subscribes: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
+- ROS2 Humble Tutorial on Creating Publishers/Subscribers: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html
