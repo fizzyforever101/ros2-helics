@@ -3,7 +3,7 @@
     "federates":[
         {
             "directory":".",
-            "exec":"helics_broker -f4",
+            "exec":"helics_broker -f5",
             "host":"localhost",
             "name":"broker"
         },
@@ -27,6 +27,13 @@
             "logfile":"./results/Relay.log",
             "host":"localhost",
             "name":"RelayFederate"
+        },
+	{
+            "directory":"./CC/",
+            "exec":"python3 CC_simulator.py",
+            "logfile":"./results/CC.log",
+            "host":"localhost",
+            "name":"CCFederate"
         }
     ],
     "name":"Example-1a-T-D-Cosimulation-HELICSRunner"

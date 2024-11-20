@@ -1,0 +1,21 @@
+[2024-11-14 21:03:10.995] [console] [error] Distribution Federate (0)[connected_error]::broker responded with error: already in initialization mode
+[2024-11-14 21:03:10.995] [console] [error] Distribution Federate (0)[connected_error]::broker responded with error: already in initialization mode
+
+ERROR    [INIT] : helics_msg::init: an unexpected error occurred when trying to create a CombinationFederate using the configuration string: 
+IEEE_123_feeder_0.json
+This is the error that was caught:
+broker responded with error: already in initialization mode
+ERROR    [INIT] : init_by_deferral(): object IEEE_123_feeder_0 initialization failed
+ERROR    [INIT] : model initialization failed
+FATAL    [INIT] : shutdown after simulation stopped prematurely
+FATAL    [INIT] : environment startup failed: Invalid argument
+
+Model profiler results
+======================
+
+Class            Time (s) Time (%) msec/obj
+---------------- -------- -------- --------
+helics_msg         0.109    100.0%    109.0
+================ ======== ======== ========
+Total              0.109    100.0%      0.1
+
