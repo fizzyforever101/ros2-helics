@@ -1,0 +1,5 @@
+Reliability report for IEEE_123_feeder_0.glm
+Number of customers = 1
+
+1366 metrics based around 1-minute base (outage-minutes)
+

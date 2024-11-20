@@ -1,0 +1,2 @@
+[2024-11-14 21:03:14.126] [console] [error] commERROR||mainbroker (1)[connecting]::Unable to bind zmq reply socket giving up tcp://127.0.0.1:23405
+[2024-11-14 21:03:14.126] [console] [error] commERROR||mainbroker (1)[connecting]::receiver connection failure

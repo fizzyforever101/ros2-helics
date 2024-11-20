@@ -1,0 +1,16 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.3
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+[2024-11-14 21:03:10.531] [console] [info] TransmissionSim::registering Input 
+HELICS Version: 3.5.1 (2024-03-19)
+TransmissionSim: Federate TransmissionSim has been registered
+TransmissionSim: Registered Publication ---> TransmissionSim/transmission_voltage
+/usr/local/lib/python3.10/dist-packages/helics/capi.py:9090: UserWarning: This is deprecated. Use `helicsInputGetTarget` instead.
+  warnings.warn("This is deprecated. Use `helicsInputGetTarget` instead.")
+TransmissionSim: Registered Subscription ---> IEEE_123_feeder_0/totalLoad
+[2024-11-14 21:03:10.533] [console] [debug] TransmissionSim (131074)[initializing]::Granting Initialization
+[2024-11-14 21:03:10.533] [console] [debug] TransmissionSim (131074)[initializing]::Granted Time=-9223372036.854776
+[2024-11-14 21:03:10.534] [console] [debug] TransmissionSim (131074)[executing]::Granting Execution
+[2024-11-14 21:03:10.534] [console] [debug] TransmissionSim (131074)[0]::Granted Time=0
+TransmissionSim: Substation Voltage to the Distribution System = 136.59 kV
+[2024-11-14 21:03:10.620] [console] [debug] TransmissionSim[0]::setting value for TransmissionSim/transmission_voltage size 24
+[2024-11-14 21:03:25.438] [console] [info] Transmission Federate (1879048194)[t=0]:: core tick

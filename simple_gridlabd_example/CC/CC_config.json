@@ -1,8 +1,8 @@
 {
     "coreInit": "--federates=1",
-    "coreName": "Relay Federate",
+    "coreName": "CC Federate",
     "coreType": "zmq",
-    "name": "Relay",
+    "name": "CC",
     "offset": 0,
     "period": 60,
     "timeDelta": 1,
@@ -10,6 +10,12 @@
     "log_level": "debug",
     "uninterruptible": true,
     "publications": [
+	{
+        "name": "FaultDetection",
+        "key": "faultDetection",
+        "type": "string",
+        "required": false
+        }
     ],
     "subscriptions": [
         {
