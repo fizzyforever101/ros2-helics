@@ -3,3 +3,18 @@ Number of customers = 1
 
 1366 metrics based around 1-minute base (outage-minutes)
 
+Events for year starting at 2013-08-28 00:00:00
+Annual Event #,Metric Interval Event #,Starting DateTime (YYYY-MM-DD hh:mm:ss),Ending DateTime (YYYY-MM-DD hh:mm:ss),Object type,Object Name,Inducing Object,"Protective" Device,Desired Fault type,Implemented Fault Type,Number customers affected,Secondary number of customers affected
+1,1,2013-08-28 00:00:00,2013-08-28 01:00:00,overhead_line,linobj12,RandEvent,sw1491149,OC-X,OC-B,0,0
+
+SAIFI = 0.000000, SAIDI = 0.000000, CAIDI = 0.000000, ASAI = 1.000000, MAIFI = 0.000000
+Interval values: SAIFI = 0.000000, SAIDI = 0.000000, CAIDI = 0.000000, ASAI = 1.000000, MAIFI = 0.000000
+
+New Metric Interval started at 2013-08-28 01:00:00
+
+
+SAIFI = 0.000000, SAIDI = 0.000000, CAIDI = 0.000000, ASAI = 1.000000, MAIFI = 0.000000
+Interval values: SAIFI = 0.000000, SAIDI = 0.000000, CAIDI = 0.000000, ASAI = 1.000000, MAIFI = 0.000000
+
+New Metric Interval started at 2013-08-28 02:00:00
+

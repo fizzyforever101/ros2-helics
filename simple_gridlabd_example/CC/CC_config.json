@@ -7,7 +7,7 @@
     "period": 60,
     "timeDelta": 1,
     "logfile": "output.log",
-    "log_level": "debug",
+    "log_level": "warning",
     "uninterruptible": true,
     "publications": [
 	{

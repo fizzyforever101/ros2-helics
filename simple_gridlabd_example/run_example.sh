@@ -22,6 +22,12 @@ cd Distribution
 gridlabd IEEE_123_feeder_0.glm > ../$DISTRIBUTION_LOG 2>&1 &
 cd ..
 
-cd Relay 
-(exec python3 Relay_simulator.py)
+#cd Relay 
+#(exec python3 Relay_simulator.py)
+#cd ..
+
+cd CC
+
+(exec python3 CC_simulator.py)
+
 cd ..

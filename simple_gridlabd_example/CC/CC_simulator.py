@@ -49,6 +49,8 @@ if __name__ == "__main__":
     #broker = create_broker()
     # fed = create_federate()
 
+    vals = []
+
     #################################  Registering  federate from json  ########################################
 
     fed = h.helicsCreateValueFederateFromConfig("CC_config.json")
@@ -96,15 +98,32 @@ if __name__ == "__main__":
 
         #############################   Subscribing to Feeder Load from to GridLAB-D ##############################################
         logger.info("{}: Federate Granted Time = {}".format(federate_name,grantedtime))
+        fault_detected = False
         for i in range(0, subkeys_count):
             sub = subid["m{}".format(i)]
             name = h.helicsInputGetTarget(sub) 
             current = h.helicsInputGetComplex(sub)
+
+            if name == "IEEE_123_feeder_0/totalLoad":
+                vals.append(current.real)
+            if name == "IEEE_123_feeder_0/totalLoad" and current.real < 10:
+                logger.info("Fault detected {} A!".format(current))
+
+                fault_detected = True
+                #print("Fault detected {} A!\n".format(current))
             logger.info("{}: Substation {} to Distribution System = {} A".format(federate_name, name, current))
 
+
         for i in range(0, pubkeys_count):
-            pub = pubid["m{}".format(i)]
-            status = h.helicsPublicationPublishString(pub, "Current shift detected!")
+
+            if fault_detected:
+                pub = pubid["m{}".format(i)]
+                status = h.helicsPublicationPublishString(pub, "Fault detected!")
+
+            else:
+
+                pub = pubid["m{}".format(i)]
+                status = h.helicsPublicationPublishString(pub, "All clear!")
 
         # print(voltage_plot,real_demand)
 
@@ -117,3 +136,13 @@ if __name__ == "__main__":
     logger.info("{}: Destroying federate".format(federate_name))
     destroy_federate(fed)
     logger.info("{}: Done!".format(federate_name))
+
+    x = [i for i in range(len(vals))]
+
+    plt.plot(x, vals, marker='o', label='Line Graph')  # Line graph
+    plt.title("Line Graph Example")
+    plt.xlabel("X-axis")
+    plt.ylabel("Y-axis")
+    plt.legend()
+    plt.savefig("plot.png")
+
